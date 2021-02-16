@@ -10,6 +10,7 @@ namespace Textscape.Menus
         public string Race { get; set; }
         public string Gender { get; set; }
         public int Level { get; set; }
+        public int Experience { get; set; }
         public int CharacterID { get; set;}
         public List<Item> Inventory { get; set; } = new List<Item>();
 
@@ -20,6 +21,7 @@ namespace Textscape.Menus
             Gender = gender;
             CharacterID = characterID;
             Level = 1;
+            Experience = 0;
         }
      }
 }

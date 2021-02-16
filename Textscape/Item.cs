@@ -10,9 +10,11 @@ namespace Textscape
         public int Weight { get; set; }
         public int Value { get; set; }
 
-        public Item(string name)
+        public Item(string name, int weight, int value)
         {
             Name = name;
+            Weight = weight;
+            Value = value;
         }
     }
 }
