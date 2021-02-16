@@ -10,6 +10,7 @@ namespace Textscape
     {
         static void Main(string[] args)
         {
+            // Create default characters
             var characters = new List<Character>
             {
                 new Character("Cow_Crafter64", "Human", "Male", 1),
@@ -18,11 +19,14 @@ namespace Textscape
                 new Character("kindfable", "Elf", "Non-binary", 4)
             };
 
+            // Display welcome message
             Menus.MainMenu.WelcomeText();
-            bool showMenu = true;
-            while (showMenu)
+
+            // Menu flow
+            bool showMainMenu = true;
+            while (showMainMenu)
             {
-                showMenu = Menus.MainMenu.HomeMenu(characters);
+                showMainMenu = Menus.MainMenu.HomeMenu(characters);
             }
         }
     }

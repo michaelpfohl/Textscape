@@ -72,7 +72,13 @@ namespace Textscape.Menus
                         new SelectionPrompt<string>()
                             .Title("[underline]Select Character:[/]")
                             .AddChoices(characterNames));
-                    return false;
+                    var selectedCharacter = Characters.Find(character => character.Name == characterSelection);
+                    var charMenuRunning = true;
+                    while (charMenuRunning)
+                    {
+                        charMenuRunning = Menus.CharacterMenu.CharMenu(selectedCharacter);
+                    }
+                    return true;
                 case '3':
                     // allow user to delete a character
                     Console.Clear();
@@ -96,7 +102,7 @@ namespace Textscape.Menus
                 case '4':
                     Console.Clear();
                     // ADD INFORMATION / TUTORIAL
-                    AnsiConsole.Markup("INFOROMATION");
+                    AnsiConsole.Markup("INFORMATION");
                     return true;
                 case '5':
                     Console.Clear();
